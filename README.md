@@ -60,4 +60,4 @@ Two functions for interacting with the training API:
 
 | File | Task name | Description |
 |------|-----------|-------------|
-| task01.js | people | Find people who survived the Great Correction and cooperate with the system |
+| s01e01-people.js | people | Find people who survived the Great Correction and cooperate with the system |
