@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_KEY = process.env.AIDEVS4_API_KEY;
-const BASE_URL = 'https://hub.ag3nts.org';
+export const API_KEY = process.env.AIDEVS4_API_KEY;
+export const BASE_URL = 'https://hub.ag3nts.org';
 
 export async function fetchData(filename) {
   const url = `${BASE_URL}/data/${API_KEY}/${filename}`;
