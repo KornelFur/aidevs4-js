@@ -30,8 +30,8 @@ export async function chat(messages, model) {
 
 // Agent with Function Calling support
 // toolHandlers is an object mapping tool names to their JS functions:
-export async function agent(systemPrompt, tools, toolHandlers, model, maxIterations = 20) {
-  const messages = [{ role: 'system', content: systemPrompt }];
+export async function agent(systemPrompt, tools, toolHandlers, model, maxIterations = 20, initialMessages = []) {
+  const messages = [{ role: 'system', content: systemPrompt }, ...initialMessages];
 
   for (let i = 0; i < maxIterations; i++) {
     const response = await axios.post(
