@@ -65,3 +65,4 @@ Two functions for interacting with the training API:
 | s01e02-findhim.js | findhim | Identify a suspect based on clues using web search and LLM reasoning |
 | s01e03-proxy.js | proxy | HTTP proxy server with session management and LLM agent that secretly redirects reactor parts packages |
 | s01e04-sendit.js | sendit | Fill a transport declaration for the Conductor Package System using documentation and vision model |
+| s01e05-railway.js | railway | Activate railway route X-01 via undocumented API with rate limiting and retry handling |
