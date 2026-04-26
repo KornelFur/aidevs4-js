@@ -9,6 +9,7 @@ export const MODELS = {
   GPT5_MINI: 'openai/gpt-5-mini',
   GPT5: 'openai/gpt-5',
   GEMINI3_1: 'google/gemini-3.1-flash-lite-preview',
+  GEMINI3_FLASH: 'google/gemini-3-flash-preview',
 };
 
 export async function chat(messages, model) {

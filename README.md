@@ -67,3 +67,4 @@ Two functions for interacting with the training API:
 | s01e04-sendit.js | sendit | Fill a transport declaration for the Conductor Package System using documentation and vision model |
 | s01e05-railway.js | railway | Activate railway route X-01 via undocumented API with rate limiting and retry handling |
 | s02e01-categorize.js | categorize | Classify 10 goods as DNG or NEU using a prompt engineered to fit a 100-token context window |
+| s02e02-electricity.js | electricity |  |
