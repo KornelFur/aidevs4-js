@@ -69,3 +69,4 @@ Two functions for interacting with the training API:
 | s02e01-categorize.js | categorize | Classify 10 goods as DNG or NEU using a prompt engineered to fit a 100-token context window |
 | s02e02-electricity.js | electricity | To be done ...
 | s02e03-failure.js | failure | Condense a large power plant failure log to under 1500 tokens and iteratively improve it based on technician feedback using a subagent search pattern |
+| s02e04-mailbox.js | mailbox | Search a live email inbox via a Gmail-like REST API to extract an attack date, system password, and SEC- confirmation code using an agentic tool-calling loop |
