@@ -71,3 +71,4 @@ Two functions for interacting with the training API:
 | s02e03-failure.js | failure | Condense a large power plant failure log to under 1500 tokens and iteratively improve it based on technician feedback using a subagent search pattern |
 | s02e04-mailbox.js | mailbox | Search a live email inbox via a Gmail-like REST API to extract an attack date, system password, and SEC- confirmation code using an agentic tool-calling loop |
 | s02e05-drone.js | drone | Locate a dam on a grid map using a vision model, then program a drone via a reactive agent loop to destroy the dam while officially targeting the power plant |
+| s03e01-evaluation.js | evaluation | Detect anomalies in 9999 sensor JSON files: programmatic range/field checks for data errors, then batched LLM classification of deduplicated operator notes to catch false OK/error claims |
