@@ -73,3 +73,4 @@ Two functions for interacting with the training API:
 | s02e05-drone.js | drone | Locate a dam on a grid map using a vision model, then program a drone via a reactive agent loop to destroy the dam while officially targeting the power plant |
 | s03e01-evaluation.js | evaluation | Detect anomalies in 9999 sensor JSON files: programmatic range/field checks for data errors, then batched LLM classification of deduplicated operator notes to catch false OK/error claims |
 | s03e02-firmware.js | firmware | Drive a restricted VM shell via an LLM agent (function calling) to find a password, fix a misconfigured cooler.bin firmware, and capture its ECCS- confirmation code |
+| s03e03-reactor.js | reactor | Navigate a robot across a 7x5 reactor grid past vertically bouncing blocks: precompute the fully deterministic block trajectory and BFS a safe left/right/wait path to the goal column |
