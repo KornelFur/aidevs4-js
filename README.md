@@ -72,3 +72,4 @@ Two functions for interacting with the training API:
 | s02e04-mailbox.js | mailbox | Search a live email inbox via a Gmail-like REST API to extract an attack date, system password, and SEC- confirmation code using an agentic tool-calling loop |
 | s02e05-drone.js | drone | Locate a dam on a grid map using a vision model, then program a drone via a reactive agent loop to destroy the dam while officially targeting the power plant |
 | s03e01-evaluation.js | evaluation | Detect anomalies in 9999 sensor JSON files: programmatic range/field checks for data errors, then batched LLM classification of deduplicated operator notes to catch false OK/error claims |
+| s03e02-firmware.js | firmware | Drive a restricted VM shell via an LLM agent (function calling) to find a password, fix a misconfigured cooler.bin firmware, and capture its ECCS- confirmation code |
