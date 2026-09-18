@@ -13,21 +13,29 @@ export const MODELS = {
 };
 
 export async function chat(messages, model) {
-  const response = await axios.post(
-    BASE_URL,
-    {
-      model: model,
-      messages: messages,
-    },
-    {
-      headers: {
-        Authorization: `Bearer ${OPENROUTER_API_KEY}`,
-        'Content-Type': 'application/json',
+  try {
+    const response = await axios.post(
+      BASE_URL,
+      {
+        model: model,
+        messages: messages,
       },
-    }
-  );
+      {
+        headers: {
+          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        timeout: 60000,
+      }
+    );
 
-  return response.data.choices[0].message.content;
+    return response.data.choices[0].message.content;
+  } catch (err) {
+    // Re-throw a plain error instead of letting an unhandled axios error
+    // bubble up — its full config (including the Authorization header)
+    // would otherwise get dumped to the console/logs.
+    throw new Error(`OpenRouter request failed: ${err.response?.status ?? ''} ${err.message}`);
+  }
 }
 
 // Agent with Function Calling support
@@ -36,11 +44,16 @@ export async function agent(systemPrompt, tools, toolHandlers, model, maxIterati
   const messages = [{ role: 'system', content: systemPrompt }, ...initialMessages];
 
   for (let i = 0; i < maxIterations; i++) {
-    const response = await axios.post(
-      BASE_URL,
-      { model, messages, tools },
-      { headers: { Authorization: `Bearer ${OPENROUTER_API_KEY}`, 'Content-Type': 'application/json' } }
-    );
+    let response;
+    try {
+      response = await axios.post(
+        BASE_URL,
+        { model, messages, tools },
+        { headers: { Authorization: `Bearer ${OPENROUTER_API_KEY}`, 'Content-Type': 'application/json' }, timeout: 60000 }
+      );
+    } catch (err) {
+      throw new Error(`OpenRouter request failed: ${err.response?.status ?? ''} ${err.message}`);
+    }
 
     const message = response.data.choices[0].message;
     // add the assistant's response to the conversation history

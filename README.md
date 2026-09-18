@@ -67,4 +67,4 @@ Two functions for interacting with the training API:
 | s01e04-sendit.js | sendit | Fill a transport declaration for the Conductor Package System using documentation and vision model |
 | s01e05-railway.js | railway | Activate railway route X-01 via undocumented API with rate limiting and retry handling |
 | s02e01-categorize.js | categorize | Classify 10 goods as DNG or NEU using a prompt engineered to fit a 100-token context window |
-| s02e02-electricity.js | electricity |  |
+| s02e02-electricity.js | electricity | Turn a hand-drawn PNG of a 3x3 cable-routing puzzle into structured per-cell edge data (vision model + a pixel-scan safety net that catches its misreads), then solve the rotation plan as a constraint-satisfaction problem — rotation can't change a piece's shape class, so the live board's own pieces plus adjacency consistency narrow a 4^9 search to 18 candidates, tried against the API until one returns the flag |
